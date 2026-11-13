@@ -1,0 +1,14 @@
+# Arquivo com a senha do banco (NUNCA enviar)
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Ambientes virtuais
+venv/
+.venv/
+
+# Editores
+.idea/
+.vscode/
