@@ -12,7 +12,7 @@ como no exemplo da aula) e com interface em **CustomTkinter**.
 
 ## O que o sistema faz
 
-Controla o estoque de uma loja e o atendimento aos clientes.
+Controla o estoque de uma loja, login do lojista e o atendimento aos clientes.
 O banco segue o DER do grupo: **Lojista**, **Mercadoria**, **Cliente** (com telefones),
 **Atendimento** (fila) e **Item de atendimento** (relação N:N entre atendimento e mercadoria).
 
@@ -52,8 +52,11 @@ database/
   seed.sql                             # dados de exemplo
   conexao.py                           # conexão com o MySQL (dados vêm do .env)
 models/mercadoria_model.py             # REGRAS: validar_mercadoria() (sem tela, sem banco)
+models/lojista_model.py                # Valida o login e senha do lojista
 views/mercadoria_view.py               # TELA em CustomTkinter (sem SQL, sem validação)
+views/lojista_view.py                  # Tela de login do lojista
 controllers/mercadoria_controller.py   # o que fazer em cada clique
+controllers/lojista_controller.py      # Intermediário entre o view, model, e repository do lojista
 repositories/mercadoria_repository.py  # ÚNICO lugar com SQL (mercadoria)
 repositories/lojista_repository.py     # lista os lojistas para a caixa de escolha
 pp1_legado/                            # código original do PP1 (dados só em memória)
