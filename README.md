@@ -54,7 +54,9 @@ database/
 models/mercadoria_model.py             # REGRAS: validar_mercadoria() (sem tela, sem banco)
 models/lojista_model.py                # Valida o login e senha do lojista
 views/mercadoria_view.py               # TELA em CustomTkinter (sem SQL, sem validação)
+views/lojista_view.py                  # Tela de login do lojista
 controllers/mercadoria_controller.py   # o que fazer em cada clique
+controllers/lojista_controller.py      # Intermediário entre o view, model, e repository do lojista
 repositories/mercadoria_repository.py  # ÚNICO lugar com SQL (mercadoria)
 repositories/lojista_repository.py     # lista os lojistas para a caixa de escolha
 pp1_legado/                            # código original do PP1 (dados só em memória)
