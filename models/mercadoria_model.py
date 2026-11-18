@@ -1,4 +1,3 @@
-# mercadoria_model.py  -  MODEL
 # As REGRAS da mercadoria (validação dos dados digitados).
 # Este arquivo não sabe nada de tela nem de banco de dados: é Python puro.
 

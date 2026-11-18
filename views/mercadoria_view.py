@@ -1,7 +1,3 @@
-# mercadoria_view.py  -  VIEW
-# A tela (CustomTkinter). Só desenha e mostra coisas.
-# Não valida dados e não acessa o banco: quem decide é o Controller.
-
 import customtkinter as ctk
 from tkinter import ttk, messagebox
 

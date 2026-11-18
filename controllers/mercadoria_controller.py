@@ -1,10 +1,5 @@
-# mercadoria_controller.py  -  CONTROLLER
 # Decide o que acontece quando o usuário clica em algo.
 # Conversa com a View (tela), o Model (regras) e o Repository (banco).
-# Aqui NÃO tem widgets (tela) e NÃO tem SQL.
-#
-# Erros do banco (MySQL desligado, senha errada no .env...) são capturados
-# com try/except e mostrados na tela com view.mostrar_erro().
 
 from views import mercadoria_view as view
 from models import mercadoria_model as model
@@ -13,7 +8,7 @@ from repositories import lojista_repository as lojista_repositorio
 
 
 def iniciar():
-    """Liga os botões, carrega os lojistas e preenche a tabela."""
+    # Liga os botões, carrega os lojistas e preenche a tabela.
     view.ligar_botoes(novo, salvar, excluir, selecionar)
     try:
         view.mostrar_lojistas(lojista_repositorio.listar())
@@ -32,7 +27,7 @@ def atualizar_tabela():
 
 
 def novo():
-    """Botão Novo: limpa a tela para cadastrar outra mercadoria."""
+    # Botão Novo: limpa a tela para cadastrar outra mercadoria.
     view.limpar_formulario()
     view.desmarcar_tabela()
 
@@ -53,7 +48,7 @@ def selecionar(evento):
 
 
 def salvar():
-    """Botão Salvar: cadastra uma mercadoria nova ou altera a selecionada."""
+    # Botão Salvar: cadastra uma mercadoria nova ou altera a selecionada.
     referencia, nome, quantidade, preco, login_lojista = view.ler_formulario()
 
     # 1) Pergunta ao Model se os dados estão certos
@@ -89,7 +84,7 @@ def salvar():
 
 
 def excluir():
-    """Botão Excluir: apaga a mercadoria selecionada (depois de confirmar)."""
+    #Botão Excluir: apaga a mercadoria selecionada (depois de confirmar).
     referencia = view.referencia_selecionada()
     if referencia is None:
         view.mostrar_erro("Clique em uma mercadoria da tabela para excluir.")

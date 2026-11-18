@@ -1,10 +1,5 @@
-# lojista_controller.py  -  CONTROLLER
 # Decide o que acontece quando o lojista clica em "Entrar".
 # Conversa com a View (tela), o Model (regras) e o Repository (banco).
-# Aqui NÃO tem widgets (tela) e NÃO tem SQL.
-#
-# Erros do banco (MySQL desligado, senha errada no .env...) são capturados
-# com try/except e mostrados na tela com view.mostrar_erro().
 
 from views import lojista_view as view
 from models import lojista_model as model
@@ -15,18 +10,18 @@ _lojista_logado = None
 
 
 def iniciar():
-    """Liga o botão Entrar e põe o cursor no campo de login."""
+    #Liga o botão Entrar e põe o cursor no campo de login.
     view.ligar_botoes(entrar)
     view.focar_login()
 
 
 def obter_lojista_logado():
-    """Devolve (login, nome_completo, funcao) de quem entrou, ou None."""
+    #Devolve (login, nome_completo, funcao) de quem entrou, ou None.
     return _lojista_logado
 
 
 def entrar():
-    """Botão Entrar: confere os dados, consulta o banco e abre o sistema."""
+    #Botão Entrar: confere os dados, consulta o banco e abre o sistema.
     global _lojista_logado
     login, senha = view.ler_formulario()
 

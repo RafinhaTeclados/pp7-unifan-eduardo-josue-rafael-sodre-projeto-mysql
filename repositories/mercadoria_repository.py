@@ -1,14 +1,6 @@
-# mercadoria_repository.py  -  REPOSITORY
 # O ÚNICO arquivo que conversa com o banco de dados sobre mercadorias.
 # O resto do sistema só chama estas funções e nunca escreve SQL.
-#
 # Cada mercadoria é uma tupla: (referencia, nome, quantidade, preco, login_lojista)
-#
-# Regras deste arquivo:
-# - todo valor entra no SQL por %s e é passado separado no execute();
-# - nenhum SQL é montado com f-string ou "+";
-# - IntegrityError (referência repetida, mercadoria em uso...) vira False;
-#   qualquer outro erro do banco sobe para o Controller mostrar na tela.
 
 import mysql.connector
 from database.conexao import conectar

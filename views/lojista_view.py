@@ -1,7 +1,3 @@
-# lojista_view.py  -  VIEW
-# A tela de login do lojista (CustomTkinter). Só desenha e mostra coisas.
-# Não valida dados e não acessa o banco: quem decide é o Controller.
-
 import customtkinter as ctk
 from tkinter import messagebox
 
@@ -53,7 +49,7 @@ botao_entrar.grid(row=3, column=0, sticky="ew", padx=24, pady=(0, 20))
 # ---------- Funções para o Controller ----------
 
 def _alternar_senha():
-    """Mostra ou esconde a senha digitada (só mexe na tela)."""
+    #Mostra ou esconde a senha digitada (só mexe na tela).
     if marcador_mostrar_senha.get() == 1:
         entrada_senha.configure(show="")
     else:
@@ -61,7 +57,7 @@ def _alternar_senha():
 
 
 def ligar_botoes(funcao_entrar):
-    """Diz qual função do Controller o botão Entrar (e a tecla Enter) devem chamar."""
+    #Diz qual função do Controller o botão Entrar (e a tecla Enter) devem chamar."""
     botao_entrar.configure(command=funcao_entrar)          # CTk usa configure(), não config()
     # O Tkinter sempre manda o 'evento' no bind, por isso o lambda
     entrada_login.bind("<Return>", lambda evento: funcao_entrar())
@@ -70,7 +66,7 @@ def ligar_botoes(funcao_entrar):
 
 
 def ler_formulario():
-    """Devolve o que foi digitado: login (sem espaços nas pontas) e senha (como digitada)."""
+    #Devolve o que foi digitado: login (sem espaços nas pontas) e senha (como digitada).
     login = entrada_login.get().strip()
     senha = entrada_senha.get()
     return login, senha
@@ -89,7 +85,7 @@ def focar_senha():
 
 
 def fechar():
-    """Fecha a tela de login. O mainloop() termina e o main.py segue em frente."""
+    #Fecha a tela de login. O mainloop() termina e o main.py segue em frente.
     janela.destroy()
 
 
