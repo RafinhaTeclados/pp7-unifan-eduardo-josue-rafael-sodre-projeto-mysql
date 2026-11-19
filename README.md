@@ -69,6 +69,10 @@ O Controller usa o **Model** para conferir os dados antes de gravar.
 
 O esqueleto inicial do projeto (estrutura de pastas, `banco.sql`, `seed.sql`, `conexao.py`, Model, Repository, Controller e View na parte de mercadorias) foi gerado com apoio do **Claude (Anthropic)**, seguindo o exemplo de MVC + Repository do professor, e revisado pelo grupo.
 
+## Nota para o Prof.
+
+A parte feita por Josué Calebe foi o controller e view do lojista. Ele não conseguiu subir ao github a tempo, então eu (RafinhaTeclados) fiz isso.
+
 ## Status
 
 - [x] Script do banco (`banco.sql`) e dados de exemplo (`seed.sql`)
